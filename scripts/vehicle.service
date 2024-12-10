@@ -1,0 +1,17 @@
+[Unit]
+Description=Vehicle Control System
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/vehicle_control
+ExecStart=/usr/bin/python3 main.py
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=vehicle_control
+
+[Install]
+WantedBy=multi-user.target

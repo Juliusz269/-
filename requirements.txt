@@ -1,0 +1,6 @@
+# Core
+aiohttp
+PyYAML
+pytest
+pytest-asyncio
+
